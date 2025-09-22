@@ -6,7 +6,7 @@
     <title>Create-Dynamic-Table</title>
 </head>
 <body>
-    <table border = "1px solod black" id = "table">
+    <table border = "1px solod black" id = "sampleTable">
         <tr>
             <td>Row1 Cell1</td>
             <td>Row1 Cell2</td>
@@ -16,19 +16,19 @@
             <td>Row2 Cell2</td>
         </tr>
     </table>
-    <button onclick="addRow()">Insert row</button>
+    <button onclick="insert_Row()">Insert row</button>
     <script>
-        const table = document.getElementById("table")
+        const table = document.getElementById("sampleTable")
         let count = 0;
-        function addRow(){
+        function insert_Row(){
             count++;
             const tr = document.createElement("tr")
 
             const td1 = document.createElement("td")
-            td1.innerText = `NewCell${count++}`
+            td1.innerText = `New Cell${count++}`
 
             const td2 = document.createElement("td")
-            td2.innerText = `NewCell${count}`
+            td2.innerText = `New Cell${count}`
 
             tr.append(td1,td2)
             table.prepend(tr)
